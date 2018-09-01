@@ -23,7 +23,7 @@ Route::post('login', 'Auth\LoginController@login');
 
 Route::post('logout', 'Auth\LoginController@logout');
 
-Route::group(['prefix' => 'articles'], function () {
+Route::group(['prefix' => 'articles','middleware'=>'auth:api'], function () {
     Route::get('/', 'ArticleController@index');
     Route::get('/{article}', 'ArticleController@show');
     Route::post('/', 'ArticleController@store');
