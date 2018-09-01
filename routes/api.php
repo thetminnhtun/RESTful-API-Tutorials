@@ -26,7 +26,3 @@ Route::group(['prefix' => 'articles'], function () {
     Route::put('/{article}', 'ArticleController@update');
     Route::delete('/{article}', 'ArticleController@destroy');
 });
-
-Route::get('/test', function() {
-	return 'ok';
-});
