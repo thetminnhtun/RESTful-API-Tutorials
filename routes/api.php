@@ -21,6 +21,8 @@ Route::post('register', 'Auth\RegisterController@register');
 
 Route::post('login', 'Auth\LoginController@login');
 
+Route::post('logout', 'Auth\LoginController@logout');
+
 Route::group(['prefix' => 'articles'], function () {
     Route::get('/', 'ArticleController@index');
     Route::get('/{article}', 'ArticleController@show');
