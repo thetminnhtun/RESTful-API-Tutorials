@@ -14,7 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return Article::all();
+        return Article::paginate(2);
     }
 
     /**
@@ -38,7 +38,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        return Article::find($id);
+        return $article;
     }
 
     /**
