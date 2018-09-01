@@ -15,7 +15,7 @@ Then install, migrate, seed, all that jazz:
 2. `php artisan key:generate`
 3.  add `Schema::defaultStringLength(191)` at AppServiceProvider <br>
 	(or)<br>
-	change at `config/database.php` file <br>
+	In `config/database.php` file, need to set up <br>
 	`'charset' => 'utf8mb4'` to `'charset' => 'utf8'` and <br>
 	`'collation' => 'utf8mb4_unicode_ci'` to `'collation' => 'utf8_general_ci'`
 4. `php artisan migrate`
